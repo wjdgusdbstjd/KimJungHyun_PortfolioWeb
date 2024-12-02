@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    h2 {
+        font-size: 4rem;
+        font-family: 'Lobster', cursive;
+        text-align: center;
+    }
+
+    h2 span {
+        font-size: 0.6em;
+        font-weight: normal;
+        margin-left: 0.3em;
+    }
+
+    .box {
+        margin-bottom: 3rem;
+        border: 1px solid #000;
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    .box>div {
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        background: #ddd;
+        margin: 10px;
+    }
+
+    .text-box {
+        height: 300px;
+        padding: 2rem;
+        background: #f2f2f2;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h2>title</h2>
+        <div class="box">
+            <div>container-1</div>
+            <div>container-2</div>
+            <div>container-3</div>
+            <div>container-4</div>
+            <div>container-5</div>
+            <div>container-6</div>
+            <div>container-7</div>
+            <div>container-8</div>
+        </div>
+
+        <!--     <div class="text-box">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestiae sint pariatur obcaecati iusto cupiditate animi fugit temporibus eaque cum neque recusandae vero fugiat, itaque rerum minima quas vel consequuntur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestiae sint pariatur obcaecati iusto cupiditate animi fugit temporibus eaque cum neque recusandae vero fugiat, itaque rerum minima quas vel consequuntur!
+    </div> -->
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $(".box").on('mousewheel', function (e) {
+
+                var wheelDelta = e.originalEvent.wheelDelta;
+
+                if (wheelDelta > 0) {
+
+                    console.log("up");
+
+                    $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+
+                } else {
+
+                    console.log("down");
+
+                    $(this).scrollLeft(-wheelDelta + $(this).scrollLeft());
+
+                }
+
+            });
+        })
+    </script>
+</body>
+
+</html>

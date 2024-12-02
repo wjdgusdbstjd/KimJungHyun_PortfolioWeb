@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'Paperlogy-1Thin';
+	src:url('./font/Paperlogy-1Thin.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-2ExtraLight';
+	src:url('./font/Paperlogy-2ExtraLight.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-3Light';
+	src:url('./font/Paperlogy-3Light.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-4Regular';
+	src:url('./font/Paperlogy-4Regular.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-5Medium';
+	src:url('./font/Paperlogy-5Medium.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-6SemiBold';
+	src:url('./font/Paperlogy-6SemiBold.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-7Bold';
+	src:url('./font/Paperlogy-7Bold.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-8ExtraBold';
+	src:url('./font/Paperlogy-8ExtraBold.ttf');
+}
+@font-face {
+	font-family: 'Paperlogy-9Black';
+	src:url('./font/Paperlogy-9Black.ttf');
+}
