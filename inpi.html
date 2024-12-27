@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/inpi.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <ul>
+                <li class="logo">
+                    <a href="index.html">Kim Jung Hyun</a>
+                </li>
+                <li><a href="about.html">About</a>
+                </li>
+                <li><a href="work.html">Work</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </header>
+
+
+        <div class="work-index">
+            <p>work
+                index</p>
+            <div class="hide-index">
+                <a href="meo.html">Me:O</a>
+                <a href="inpi.html">INPI</a>
+                <a href="gonggong.html">GongGong</a>
+                <a href="toast.html">Toast!</a>
+                <a href="pea.html">Princess and Pea</a>
+                <a href="ormak.html">Ormak</a>
+                <a href="chahong.html">Chahong</a>
+                <a href="meoRedesign.html">Me:O Redesign</a>
+                <a href="jaju.html">JAJU</a>
+            </div>
+        </div>
+
+
+        <div class="main">
+            <ul class="title">
+                <li>
+                    <h1>INPI</h1>
+                </li>
+                <li>후천적 장애인을 위한 정신적 케어 서비스</li>
+                <li>#커뮤니케이션 국제 공모전</li>
+                <li>#프로그래밍</li>
+            </ul>
+
+            <div class="tag">
+                <div class="web"><a href="https://wjdgusdbstjd.github.io/inpi/#main">VISIT WEB</a></div>
+
+                <ul>
+                    <li>프로젝트_2023커뮤니케이션 국제 디자인 공모전 출품작</li>
+                    <li>프로젝트인원_3인(기획1 디자인1 프로그래밍1)</li>
+                    <li>프로젝트 기간_2023 03 ~ 2023 06</li>
+                </ul>
+            </div>
+
+
+            <div class="explain">
+                <ul>
+                    <li>
+                        <h3>프로젝트에서 나의 역할</h3>
+                        <p>기획 단계에서 자료조사와 리서치를, 디자인 단계에서 앱의 세부적인 디자인을 함께 진행하였습니다. 웹 개발의 단계에서는 디자인되어있는 웹의 구성을 보고
+                            html,css,javascript를 활용해 실제 웹사이트로
+                            구현하였습니다.</p>
+                    </li>
+                    <li>
+                        <h3>프로젝트 진행 과정 중 어려움과 해결</h3>
+                        <p>앱을 설명하는 페이지에서의 스크롤방식을 어떻게 구현해야하는지 알아내는 과정에서 어려움을 겪었습니다. 처음엔 구글과 Chat GTP등의 경로를 통해 웹페이지의 스크롤
+                            방식에 대해 먼저 알아보고, 구현하고자하는
+                            스크롤방식을 활용한 웹사이트들을 찾아 개발자도구에서 어떤 코드들을 사용했고, 어떤 플러그인을 활용했는지 꼼꼼히 분석하여 원하는 스크롤 방식을 구현해냈습니다.</p>
+                    </li>
+                    <li>
+                        <h3>프로젝트를 통한 발전</h3>
+                        <p>플러그인에 대한 개념을 공부했습니다. 플러그인 내 코드를 어떻게 수정해야하는지, 동일한 플러그인을 두개 이상 사용하고자하려면 어떻게 해야하는지에 대해 배웠고,
+                            웹페이지를 만들면서 반응형에 대해 아쉬움이 많아 따로
+                            공부해보면서 반응형 단위와 사용성에 대해 고민해보는 계기가 되었습니다.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2>Project preview
+                <span class="small-tag">* 해당 프로젝트는 팀으로 수행한 프로젝트로 이미지 또한 팀 작업을 통해 완성된 작업입니다. 참고용으로만 봐주시면
+                    감사하겠습니다.</span>
+            </h2>
+
+            <div class="preview">
+
+                <div class="preview-img" id="previewImg">
+                    <div class="img-1">
+                        <img src="./img/inpi-1.png" alt="">
+                        <img src="./img/inpi-2.png" alt="">
+                    </div>
+
+                </div>
+
+                <!-- <span class="material-symbols-outlined btn-motion1" id="arrow">
+                    arrow_forward
+                </span> -->
+
+            </div>
+
+        </div>
+
+
+        <footer></footer>
+    </div>
+
+    <script>
+        document.querySelector('.work-index p').addEventListener('click', function () {
+            const hideIndex = document.querySelector('.hide-index');
+            if (hideIndex.style.height === '0px' || hideIndex.style.height === '') {
+                expandElement(hideIndex);
+            } else {
+                collapseElement(hideIndex);
+            }
+        });
+
+        function expandElement(element) {
+            let height = 0;
+            element.style.overflow = 'hidden'; // 넘치는 내용을 숨김
+            element.style.display = 'flex'; // 요소가 보이도록 설정
+
+            function step() {
+                height += 0.8; // 높이를 더 빠르게 증가시킴 (vw 단위에 맞게 조정)
+                element.style.height = height + 'vw';
+
+                // 8로 변경
+                if (height < 8) { // 목표 높이 설정 (예: 8.33vw)
+                    requestAnimationFrame(step);
+                }
+            }
+
+            requestAnimationFrame(step);
+        }
+
+        function collapseElement(element) {
+            let height = element.clientHeight;
+
+            function step() {
+                height -= 15; // 높이를 더 빠르게 감소시킴
+                element.style.height = height + 'px';
+
+                if (height > 0) {
+                    requestAnimationFrame(step);
+                } else {
+                    element.style.height = '0px'; // 애니메이션이 끝나면 높이를 0으로 설정
+                }
+            }
+
+            requestAnimationFrame(step);
+        }
+
+
+        // --------------------------------------
+
+
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     const previewImg = document.getElementById("previewImg");
+        //     const arrow = document.getElementById("arrow");
+
+        //     if (!previewImg || !arrow) {
+        //         console.error("previewImg 또는 arrow 요소를 찾을 수 없습니다.");
+        //         return;
+        //     }
+
+        //     const imageWidth = previewImg.scrollWidth / previewImg.childElementCount;
+
+        //     previewImg.addEventListener("scroll", () => {
+        //         const scrollLeft = previewImg.scrollLeft;
+        //         const maxScrollLeft = previewImg.scrollWidth - previewImg.clientWidth;
+
+        //         if (scrollLeft >= maxScrollLeft - 1) {
+        //             arrow.style.display = "none";
+        //         } else {
+        //             arrow.style.display = "block";
+        //         }
+        //     });
+
+        //     arrow.addEventListener("click", () => {
+        //         const scrollLeft = previewImg.scrollLeft;
+        //         const maxScrollLeft = previewImg.scrollWidth - previewImg.clientWidth;
+
+        //         if (scrollLeft < maxScrollLeft - 1) {
+        //             previewImg.scrollBy({ left: imageWidth, behavior: "smooth" });
+        //         } else {
+        //             previewImg.scrollTo({ left: 0, behavior: "smooth" });
+        //         }
+        //     });
+        // });
+
+
+    </script>
+</body>
+
+</html>

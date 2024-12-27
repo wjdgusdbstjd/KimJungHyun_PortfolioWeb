@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/work.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <ul>
+                <li class="logo">
+                    <a href="index.html">Kim Jung Hyun</a>
+                </li>
+                <li><a href="about.html">About</a>
+                </li>
+                <li><a href="work.html">Work</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </header>
+
+        <div class="container">
+            <!-- <h2>Selected Works(7)</h2> -->
+            <h2>옆으로 스크롤하면 더 다양한 작업을 볼 수 있습니다. → </h2>
+            <div class="box">
+                <div>
+                    <a href="meo.html">
+                        <img src="./img/meo.png" alt="">
+                        <h1>Me:O</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="inpi.html">
+                        <img src="./img/inpi.png" alt="">
+                        <h1>INPI</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="gonggong.html">
+                        <img src="./img/gonggong.png" alt="">
+                        <h1>GongGong</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="toast.html">
+                        <img src="./img/toast.png" alt="">
+                        <h1>Toast!</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="pea.html">
+                        <img src="./img/pea.png" alt="">
+                        <h1>Princess and Pea</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="ormak.html">
+                        <img src="./img/ormak.png" alt="">
+                        <h1>Ormak</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="chahong.html">
+                        <img src="./img/chahong.png" alt="">
+                        <h1>Chahong</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="meoRedesign.html">
+                        <img src="./img/meo-redesign.png" alt="">
+                        <h1>Me:O Redesign</h1>
+                    </a>
+                </div>
+                <div>
+                    <a href="jaju.html">
+                        <img src="./img/jaju.png" alt="">
+                        <h1>JAJU</h1>
+                    </a>
+                </div>
+            </div>
+
+            <footer>
+                <p>© 2024 Kim jung hyun. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            // 초기 상태: 모든 이미지를 흑백으로 설정
+            $(".box img").css({
+                filter: "grayscale(100%)",
+                transition: "filter 0.5s ease" // 부드러운 전환 효과
+            });
+
+            // .box 영역에 호버 시 모든 이미지 컬러로 변경
+            $(".box").hover(
+                function () {
+                    $(".box img").css("filter", "grayscale(0%)"); // 컬러로 변경
+                },
+                function () {
+                    $(".box img").css("filter", "grayscale(100%)"); // 흑백으로 복원
+                }
+            );
+
+            // 스크롤 이벤트 처리
+            $(".box").on("mousewheel DOMMouseScroll", function (e) {
+                e.preventDefault(); // 기본 동작 방지 (새로 스크롤 방지)
+
+                var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+                $(this).scrollLeft($(this).scrollLeft() - delta); // 가로 스크롤
+
+                // 이미지가 컬러 상태로 유지되도록 설정
+                $(".box img").css("filter", "grayscale(0%)");
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

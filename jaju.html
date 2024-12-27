@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/jaju.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <ul>
+                <li class="logo">
+                    <a href="index.html">Kim Jung Hyun</a>
+                </li>
+                <li><a href="about.html">About</a>
+                </li>
+                <li><a href="work.html">Work</a>
+                    <div class="circle"></div>
+                </li>
+            </ul>
+        </header>
+
+        <div class="work-index">
+            <p>work <br>
+                index</p>
+            <div class="hide-index">
+                <a href="meo.html">Me:O</a>
+                <a href="inpi.html">INPI</a>
+                <a href="gonggong.html">GongGong</a>
+                <a href="toast.html">Toast!</a>
+                <a href="pea.html">Princess and Pea</a>
+                <a href="ormak.html">Ormak</a>
+                <a href="chahong.html">Chahong</a>
+                <a href="meoRedesign.html">Me:O Redesign</a>
+                <a href="jaju.html">JAJU</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <ul class="title">
+                <li>
+                    <h1>JAJU모바일 앱 UIUX</h1>
+                </li>
+                <!-- <li>소아비만 위험군 아동을 위한 식습관 개선 서비스</li> -->
+                <li>#UIUX</li>
+                <!-- <li>#프로그래밍</li> -->
+            </ul>
+
+            <!-- <div class="tag">
+                <div class="web"><a href="https://wjdgusdbstjd.github.io/ME-O/">VISIT WEB</a></div>
+
+                <ul>
+                    <li>프로젝트_계원예술대학교 2023 졸업전시 프로젝트</li>
+                    <li>프로젝트 인원_6인(기획1 디자인3 프로그래밍2)</li>
+                    <li>프로젝트 기간_2023 09~2023 11</li>
+                </ul>
+            </div> -->
+
+
+            <div class="explain">
+                <p></p>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2>Project preview</h2>
+            <img src="./img/jaju-1.png" alt="">
+            <!-- <img src="./img/meo-2.png" alt="">
+            <img src="./img/meo-3.png" alt=""> -->
+        </div>
+
+
+        <footer></footer>
+    </div>
+
+    <script>
+        document.querySelector('.work-index p').addEventListener('click', function () {
+            const hideIndex = document.querySelector('.hide-index');
+            if (hideIndex.style.height === '0px' || hideIndex.style.height === '') {
+                expandElement(hideIndex);
+            } else {
+                collapseElement(hideIndex);
+            }
+        });
+
+        function expandElement(element) {
+            let height = 0;
+            element.style.overflow = 'hidden'; // 넘치는 내용을 숨김
+            element.style.display = 'flex'; // 요소가 보이도록 설정
+
+            function step() {
+                height += 0.8; // 높이를 더 빠르게 증가시킴 (vw 단위에 맞게 조정)
+                element.style.height = height + 'vw';
+
+                if (height < 8) { // 목표 높이 설정 (예: 8.33vw)
+                    requestAnimationFrame(step);
+                }
+            }
+
+            requestAnimationFrame(step);
+        }
+
+        function collapseElement(element) {
+            let height = element.clientHeight;
+
+            function step() {
+                height -= 15; // 높이를 더 빠르게 감소시킴
+                element.style.height = height + 'px';
+
+                if (height > 0) {
+                    requestAnimationFrame(step);
+                } else {
+                    element.style.height = '0px'; // 애니메이션이 끝나면 높이를 0으로 설정
+                }
+            }
+
+            requestAnimationFrame(step);
+        }
+
+
+
+    </script>
+</body>
+
+</html>
